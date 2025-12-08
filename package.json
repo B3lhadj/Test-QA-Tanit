@@ -1,0 +1,19 @@
+{
+  "name": "tanit-qa-project",
+  "version": "1.0.0",
+  "description": "Full-stack task management application with comprehensive QA",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "test:e2e": "cd frontend && npm run test:e2e",
+    "test:api": "cd backend && python -m pytest tests/api_tests/ -v"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+

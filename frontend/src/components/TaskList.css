@@ -1,0 +1,162 @@
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.task-list-empty {
+  background: white;
+  padding: 60px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-list-empty p {
+  color: #666;
+  font-size: 18px;
+}
+
+.task-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 4px solid #667eea;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.task-card.priority-high {
+  border-left-color: #dc3545;
+}
+
+.task-card.priority-medium {
+  border-left-color: #ffc107;
+}
+
+.task-card.priority-low {
+  border-left-color: #28a745;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.task-header h3 {
+  margin: 0;
+  color: #333;
+  flex: 1;
+}
+
+.task-badges {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge.priority-high {
+  background: #fee;
+  color: #c33;
+}
+
+.badge.priority-medium {
+  background: #fff8e1;
+  color: #f57c00;
+}
+
+.badge.priority-low {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.badge.status-pending {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.badge.status-in-progress {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.badge.status-completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.task-description {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.status-select {
+  padding: 6px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn-edit {
+  background: #667eea;
+  color: white;
+}
+
+.btn-edit:hover {
+  opacity: 0.9;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  opacity: 0.9;
+}
+
